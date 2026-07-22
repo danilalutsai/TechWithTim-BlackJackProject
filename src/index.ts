@@ -27,19 +27,6 @@ async function main(): Promise<void> {
       },
     },
   });
-
-  // Use the answers stored in the answers object.
-  console.log(`Hello, ${answers.playerName}!`);
-  console.log(`Your favorite card is ${answers.favoriteCard}.`);
-
-  switch (answers.playerName) {
-    case "Messi":
-      console.log(`Your name is Messi?`);
-      break
-    case "Ronaldo":
-      console.log(`Your name is Ronaldo?`);
-      break
-  }
 }
 
 void main().catch((error: unknown) => {

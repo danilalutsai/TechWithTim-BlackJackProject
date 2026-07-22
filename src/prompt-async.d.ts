@@ -6,6 +6,7 @@
 // This say the package called "prompt-async" exists
 declare module "prompt-async" {
 
+  // This describes one terminal question
   type PromptQuestion = {
     // Is the question showed to the user field
     description: string;
@@ -17,8 +18,10 @@ declare module "prompt-async" {
   type PromptSchema = {
     properties: Record<string, PromptQuestion>;
   };
+
   // This describes the package API
   interface Prompt {
+    message: string;
     // Starts the prompt system. Void means it returns no usefull value
     start(): void;
     // Accepts an array of question names, returns a Promise because user input takes time,
